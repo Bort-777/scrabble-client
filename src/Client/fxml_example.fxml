@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:controller="Client.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
+          styleClass="root">
+
+    <padding>
+        <Insets top="25" right="25" bottom="10" left="25" />
+    </padding>
+    
+    <Label fx:id="textField11" text="Por\nt:" GridPane.columnIndex="0"
+       GridPane.rowIndex="0" />
+    <Text id="welcome-text" text="Welcome" GridPane.columnIndex="1"
+          GridPane.rowIndex="1" GridPane.columnSpan="13" />
+
+    <Label text="Port:" GridPane.columnIndex="1"
+           GridPane.rowIndex="2" />
+    <TextField fx:id="portField"  text="8080" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    <Label text="Word:" GridPane.columnIndex="1"
+           GridPane.rowIndex="3" />
+    <TextField fx:id="textField" text="answer"
+               GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+    <VBox spacing="10" alignment="bottom_right" GridPane.columnIndex="1"
+          GridPane.rowIndex="4">
+        <Button text="Connect" onAction="#handleSubmitButtonAction" />
+        <Button text="Disconnect" onAction="#disconect" />
+        <Button text="Update" onAction="#update" />
+        <Button text="Enter" onAction="#answer" />
+    </VBox>
+    
+    <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="0"
+          GridPane.rowIndex="0">
+        <Button text="1" onAction="#set" />
+        <Button text="2" onAction="#set" />
+        <Button text="3" onAction="#set" />
+        <Button text="4" onAction="#set" />
+    </HBox>
+    
+    <Text fx:id="actiontarget" GridPane.columnIndex="1"
+          GridPane.rowIndex="5" />
+
+	
+
+</GridPane>
